@@ -1,131 +1,301 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Apply smooth typography and layout */
-body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(to right, #006400, #8b0000);
-  color: #ffffff;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Login Form Styling */
-.login-container {
-  width: 100%;
-  max-width: 400px;
-  background: #ffffff;
-  color: #333;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  text-align: center;
-}
-
-/* Input Fields */
-input {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-/* Password Container Fix */
-.password-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.password-container input {
-  width: 100%;
-  padding-right: 0;
-  z-index: 1;
-}
-
-.password-container button {
-  position: relative;
-  margin-top: 8px;
-  background: none;
-  border: 1px solid #006400;
-  color: #006400;
-  cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: bold;
-  z-index: 2;
-  padding: 5px 10px;
-  border-radius: 6px;
-  width: fit-content;
-}
-
-.password-container button:focus {
-  outline: none;
-}
-
-/* Button Styling */
-button {
-  width: 100%;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-
-button.primary {
-  background: #006400;
-  color: #ffffff;
-}
-
-button.primary:hover {
-  background: #004d00;
-}
-
-button.outline {
-  background: none;
-  border: 2px solid #006400;
-  color: #006400;
-}
-
-button.outline:hover {
-  background: #006400;
-  color: #ffffff;
-}
-
-/* Links */
-a {
-  color: #006400;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
+/* ==============================
+   General Reset & Global Styles
+   ============================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Apply smooth typography and layout */
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom, #004d00, #226622);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* ==============================
+     Login Page Styles
+     ============================== */
   .login-container {
-    width: 90%;
-    padding: 1.5rem;
+    width: 100%;
+    max-width: 400px;
+    background: #226622; /* Dark green background */
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border: 2px solid #004d00; /* Slight border for contrast */
   }
-
+  
+  /* Input Fields */
   input {
-    font-size: 0.9rem;
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #88cc88; /* Light green border */
+    border-radius: 8px;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
   }
-
+  
+  /* Password Container Fix */
+  .password-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .password-container input {
+    width: 100%;
+    padding-right: 0;
+    z-index: 1;
+  }
+  
+  .password-container button {
+    position: relative;
+    margin-top: 8px;
+    background: none;
+    border: 1px solid #88cc88;
+    color: #88cc88;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    z-index: 2;
+    padding: 5px 10px;
+    border-radius: 6px;
+    width: fit-content;
+  }
+  
+  .password-container button:focus {
+    outline: none;
+  }
+  
+  /* Button Styling */
   button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  button.primary {
+    background: #88cc88;
+    color: black;
+    border: 2px solid #004d00;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  button.primary:hover {
+    background: #66aa66;
+  }
+  
+  button.outline {
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+  }
+  
+  button.outline:hover {
+    background: white;
+    color: #226622;
+  }
+  
+  /* Links */
+  a {
+    color: #88cc88;
+    text-decoration: none;
     font-size: 0.9rem;
   }
-}
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .login-container {
+      width: 90%;
+      padding: 1.5rem;
+    }
+  
+    input {
+      font-size: 0.9rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* ==============================
+     Landing Page Styles
+     ============================== */
+  .landing-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom, #004d00, #226622);
+  }
+  
+  /* Header */
+  .landing-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #004d00;
+    padding: 15px 40px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .landing-header h1 {
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .landing-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .landing-header nav a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+  }
+  
+  .landing-header nav a:hover {
+    color: #88cc88;
+  }
+  
+  /* Center Landing Content */
+  .landing-content {
+    max-width: 700px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Fix Text Readability */
+  .landing-content h1, 
+  .landing-content p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .landing-content h1 {
+    font-size: 3rem;
+    color: white;
+  }
+  
+  .landing-content p {
+    font-size: 1.2rem;
+    color: #f3e8ff;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Styling */
+  .button-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .primary-btn {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #88cc88;
+    color: black;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .primary-btn:hover {
+    background: #66aa66;
+  }
+  
+  .outline-btn {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid white;
+    background: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  }
+  
+  .outline-btn:hover {
+    background: white;
+    color: #226622;
+  }
+  
+  /* About Section */
+  .about-section {
+    margin-top: 60px;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .about-section h2 {
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .about-section p {
+    font-size: 1.1rem;
+    color: #f3e8ff;
+  }
+  
+  /* Responsive Fix */
+  @media (max-width: 768px) {
+    .landing-content {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .landing-content h1 {
+      font-size: 2.5rem;
+    }
+  
+    .button-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .primary-btn, .outline-btn {
+      width: 100%;
+    }
+  }
+  
