@@ -299,3 +299,118 @@
     }
   }
   
+  /* ==============================
+   SignUp Page Styles (Isolated)
+   ============================== */
+
+.signup-container {
+  width: 100%;
+  max-width: 400px;
+  background: #226622; /* Dark green background */
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border: 2px solid #004d00; /* Darker green border for contrast */
+}
+
+/* Title */
+.signup-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Input Fields */
+.signup-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #88cc88; /* Light green border */
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  outline: none;
+}
+
+/* Input Focus Effect */
+.signup-container input:focus {
+  border-color: #66aa66;
+  box-shadow: 0 0 8px rgba(136, 204, 136, 0.5);
+}
+
+/* Password Field Container */
+.signup-password-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-password-container input {
+  width: 100%;
+  padding-right: 40px; /* Space for the eye icon */
+}
+
+/* Eye Icon (Show/Hide Password) */
+.signup-eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 55%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #88cc88;
+}
+
+/* Button Styling */
+.signup-container button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  background: #88cc88;
+  color: black;
+  border: 2px solid #004d00;
+}
+
+.signup-container button:hover {
+  background: #66aa66;
+}
+
+/* Sign-in Link */
+.signup-container p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.signup-container p a {
+  color: #88cc88;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-container p a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .signup-container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .signup-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .signup-container button {
+    font-size: 0.9rem;
+  }
+}
