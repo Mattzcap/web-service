@@ -57,7 +57,7 @@ const SignupPage = () => {
           </div>
           
           {/* Password Field */}
-          <div className="password-container">
+          <div className="password-container relative">
             <label className="block font-medium text-gray-700 mb-2">Password</label>
             <input 
               type={showPassword ? "text" : "password"}
@@ -70,14 +70,14 @@ const SignupPage = () => {
             />
             <span 
               onClick={() => setShowPassword(!showPassword)}
-              className="eye-icon"
+              className="absolute right-3 top-10 text-gray-700 cursor-pointer"
             >
               {showPassword ? <FaEyeSlash size={20} /> : <FaEye size={20} />}
             </span>
           </div>
 
           {/* Confirm Password Field */}
-          <div className="password-container">
+          <div className="password-container relative">
             <label className="block font-medium text-gray-700 mb-2">Confirm Password</label>
             <input 
               type={showConfirmPassword ? "text" : "password"}
@@ -90,7 +90,7 @@ const SignupPage = () => {
             />
             <span 
               onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-              className="eye-icon"
+              className="absolute right-3 top-10 text-gray-700 cursor-pointer"
             >
               {showConfirmPassword ? <FaEyeSlash size={20} /> : <FaEye size={20} />}
             </span>

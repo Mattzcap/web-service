@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import LandingPage from "./pages/LandingPage";
 import SignupPage from "./pages/SignUpPage";
-import ForgotPage from "./pages/ForgotPage ";
+import ForgotPage from "./pages/ForgotPage";
+import EmailForgot from "./pages/EmailForgot";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
 
         {/* Default Route - Forgot Page */}
         <Route path="/forgot" element={<ForgotPage />} />
+
+        {/* Default Route - Forgot Page */}
+        <Route path="/emailforgot" element={<EmailForgot />} />        
 
         
 

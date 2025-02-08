@@ -528,5 +528,96 @@
   .eye-icon:hover {
     color: #20dd07;
   }
-  
+  /* ==============================
+   Forgot Password Page Styles
+   ============================== */
+.forgot-password-container {
+  width: 100%;
+  max-width: 400px;
+  background: #226622; /* Dark green background */
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border: 2px solid #004d00; /* Darker green border for contrast */
+}
+
+/* Title */
+.forgot-password-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Input Fields */
+.forgot-password-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #88cc88; /* Light green border */
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  outline: none;
+}
+
+/* Input Focus Effect */
+.forgot-password-container input:focus {
+  border-color: #66aa66;
+  box-shadow: 0 0 8px rgba(136, 204, 136, 0.5);
+}
+
+/* Reset Button Styling */
+.forgot-password-container button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  background: #88cc88;
+  color: black;
+  border: 2px solid #004d00;
+}
+
+.forgot-password-container button:hover {
+  background: #66aa66;
+}
+
+/* Sign-in Link */
+.forgot-password-container p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.forgot-password-container p a {
+  color: #88cc88;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.forgot-password-container p a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .forgot-password-container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .forgot-password-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .forgot-password-container button {
+    font-size: 0.9rem;
+  }
+}
+
   
