@@ -414,3 +414,119 @@
     font-size: 0.9rem;
   }
 }
+/* ==============================
+   Reset Password Page Styles
+   ============================== */
+   .reset-password-container {
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    color: black;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  /* Title */
+  .reset-password-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Input Fields */
+  .reset-password-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+    color: black;
+    outline: none;
+    padding-right: 40px; /* Space for eye icon */
+  }
+  
+  /* Input Focus Effect */
+  .reset-password-container input:focus {
+    border-color: #888;
+    box-shadow: 0 0 8px rgba(136, 136, 136, 0.5);
+  }
+  
+  /* Password Container */
+  .password-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Eye Icon */
+  .eye-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+  }
+  .eye-icon:hover {
+    color: #20dd07;
+  }
+  
+  /* Reset Button Styling */
+  .reset-password-container button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    background: #4a4a4a;
+    color: white;
+  }
+  
+  .reset-password-container button:hover {
+    background: #333;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .reset-password-container {
+      width: 90%;
+      padding: 1.5rem;
+    }
+  
+    .reset-password-container h2 {
+      font-size: 1.8rem;
+    }
+  
+    .reset-password-container button {
+      font-size: 0.9rem;
+    }
+  }
+  .password-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .relative {
+    position: relative;
+  }
+  
+  .eye-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+  }
+  
+  .eye-icon:hover {
+    color: #20dd07;
+  }
+  
+  
