@@ -1,0 +1,61 @@
+.taxi-fleet-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .taxi-fleet-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .taxi-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .taxi-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .taxi-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #fff;
+  }
+  
+  .status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+  }
+  
+  .online {
+    color: green;
+  }
+  
+  .offline {
+    color: red;
+  }
+  
+  .real-time-map {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .map-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background: #ddd;
+    border-radius: 8px;
+    color: #333;
+  }
+  

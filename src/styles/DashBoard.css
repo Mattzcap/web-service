@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    background-color: #f4f4f9 !important; /* Same as your dashboard */
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    background-color: #f4f4f9;
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Header */
+  .dashboard-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1e293b;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Navigation Buttons */
+  .dashboard-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  
+  .nav-button {
+    padding: 10px 16px;
+    font-size: 1rem;
+    background: #4f46e5;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  
+  .nav-button:hover {
+    background: #3730a3;
+  }
+  
+  /* Statistics Cards */
+  .dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .stat-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .stat-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .stat-text h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .stat-text p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4f46e5;
+  }
+  
+  /* Analytics Chart */
+  .analytics-chart {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .analytics-chart h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  /* Management Cards */
+  .management-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .management-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .management-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .management-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .management-text h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .management-text p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  

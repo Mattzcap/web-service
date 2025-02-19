@@ -1,0 +1,29 @@
+.analytics-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .analytics-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .analytics-card {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 15px;
+  }
+  
+  .analytics-card h2 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .recharts-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
