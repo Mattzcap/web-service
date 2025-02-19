@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Routes>
         {/* Default Route - Login Page */}
-        <Route path="/" element={<LoginPage />} />
+        <Route path="/" element={<ForgotPage />} />
         
         {/* Landing Page Route */}
         <Route path="/landing" element={<LandingPage />} />
