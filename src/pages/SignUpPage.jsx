@@ -18,7 +18,7 @@ const SignUpPage = () => {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       console.log("Sign-up successful!");
-      navigate("/landing"); // Redirect after successful sign-up
+      navigate("/"); // Redirect after successful sign-up
     } catch (error) {
       console.error("Sign-up error:", error.message);
       setError("Error signing up. Please try again.");

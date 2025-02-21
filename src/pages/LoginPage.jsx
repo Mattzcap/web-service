@@ -78,10 +78,7 @@ const LoginPage = () => {
             <a href="/forgot-password" className="text-green-600 hover:underline text-sm link-text">Forgot password?</a>
           </div>
 
-          
-        </form>
-
-        {/* Google Sign-in Button */}
+          {/* Google Sign-in Button */}
 
         <div className="button-container">
           <button type="submit" className="w-full py-3 text-lg primary">
@@ -100,6 +97,10 @@ const LoginPage = () => {
             Sign in with Google
           </button>
         </div>
+          
+        </form>
+
+        
 
         <p className="text-center text-gray-600 mt-6 text-sm">
           New to AuAdsTri? <a href="/signup" className="text-green-600 hover:underline link-text">Join now</a>
