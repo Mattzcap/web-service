@@ -10,8 +10,8 @@
   /* Apply smooth typography and layout */
   body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(to bottom, #004d00, #226622);
-    color: #ffffff;
+    background: linear-gradient(to bottom, #004d00, #06d6a0);
+    color: #000000;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -24,13 +24,13 @@
   .login-container {
     width: 100%;
     max-width: 400px;
-    background: #226622; /* Dark green background */
-    color: #ffffff;
+    background: #fcf7f8; /* Dark green background */
+    color: #a31621;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     text-align: center;
-    border: 2px solid #004d00; /* Slight border for contrast */
+    border: 2px solid #a31621; /* Slight border for contrast */
   }
   
   /* Input Fields */
@@ -38,11 +38,11 @@
     width: 100%;
     padding: 12px;
     margin: 8px 0;
-    border: 1px solid #88cc88; /* Light green border */
+    border: 1px solid #a31621; /* Light green border */
     border-radius: 8px;
     font-size: 1rem;
-    background: rgba(0, 0, 0, 0.3);
-    color: white;
+    background: #fcf7f8;
+    color: #1F1C2C;
   }
   
   /* Password Container Fix */
@@ -63,8 +63,8 @@
     position: relative;
     margin-top: 8px;
     background: none;
-    border: 1px solid #88cc88;
-    color: #88cc88;
+    border: 1px solid #a31621;
+    color: #a31621;
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: bold;
@@ -79,6 +79,57 @@
   }
   
   /* Button Styling */
+
+  /* Button Styling */
+button.primary {
+  background: #FCF7F8; /* Light background */
+  color: #a31621; /* Dark red text */
+  border: 2px solid #a31621; /* Contrast border */
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+button.primary:hover {
+  background: #a31621; /* Dark red on hover */
+  color: #FCF7F8; /* Light text on hover */
+}
+
+/* Google Sign-in Button */
+button.google-signin {
+  background: #FCF7F8; /* Light background */
+  color: #a31621; /* Dark red text */
+  border: 2px solid #a31621; /* Contrast border */
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+button.google-signin:hover {
+  background: #a31621; /* Dark red on hover */
+  color: #FCF7F8; /* Light text on hover */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Adds space between buttons */
+  align-items: center;
+  width: 100%;
+}
+
+button.primary, button.google-signin {
+  width: 100%;
+}
+
   button {
     width: 100%;
     padding: 12px;
@@ -90,22 +141,11 @@
     transition: 0.3s ease-in-out;
   }
   
-  button.primary {
-    background: #88cc88;
-    color: black;
-    border: 2px solid #004d00;
-    padding: 12px 24px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  button.primary:hover {
-    background: #66aa66;
-  }
+
   
   button.outline {
     border: 2px solid white;
-    color: white;
+    color: #a31621;
     background: transparent;
   }
   
@@ -116,7 +156,7 @@
   
   /* Links */
   a {
-    color: #88cc88;
+    color: #a31621;
     text-decoration: none;
     font-size: 0.9rem;
   }
@@ -221,6 +261,7 @@
   /* Button Styling */
   .button-container {
     display: flex;
+    
     gap: 15px;
     justify-content: center;
     margin-top: 20px;
@@ -299,27 +340,20 @@
     }
   }
   
-  /* ==============================
-   SignUp Page Styles (Isolated)
+ /* ==============================
+   SignUp Page Styles (Match Login Page)
    ============================== */
 
 .signup-container {
   width: 100%;
   max-width: 400px;
-  background: #226622; /* Dark green background */
-  color: white;
+  background: #fcf7f8; /* Light background */
+  color: #a31621; /* Dark red text */
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
   text-align: center;
-  border: 2px solid #004d00; /* Darker green border for contrast */
-}
-
-/* Title */
-.signup-container h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+  border: 2px solid #a31621; /* Slight border for contrast */
 }
 
 /* Input Fields */
@@ -327,70 +361,52 @@
   width: 100%;
   padding: 12px;
   margin: 8px 0;
-  border: 1px solid #88cc88; /* Light green border */
+  border: 1px solid #a31621;
   border-radius: 8px;
   font-size: 1rem;
-  background: rgba(0, 0, 0, 0.3);
-  color: white;
-  outline: none;
+  background: #fcf7f8;
+  color: #1F1C2C;
 }
 
-/* Input Focus Effect */
-.signup-container input:focus {
-  border-color: #66aa66;
-  box-shadow: 0 0 8px rgba(136, 204, 136, 0.5);
-}
-
-/* Password Field Container */
-.signup-password-container {
+/* Password Container */
+.password-container {
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-}
-
-.signup-password-container input {
   width: 100%;
-  padding-right: 40px; /* Space for the eye icon */
 }
 
-/* Eye Icon (Show/Hide Password) */
-.signup-eye-icon {
+
+.password-container input {
+  width: 100%;
+  padding-right: 10px; /* Leave space for the eye icon */
+}
+
+/* Show/Hide Password Button */
+.password-toggle {
   position: absolute;
-  right: 10px;
-  top: 55%;
+  right: 10px;  /* Move it to the right corner */
+  top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #88cc88;
-}
-
-/* Button Styling */
-.signup-container button {
-  width: 100%;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 8px;
+  background: none;
   border: none;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-  background: #88cc88;
-  color: black;
-  border: 2px solid #004d00;
+  color: #a31621;
+  font-size: 1.5rem; /* Slightly larger for visibility */
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.signup-container button:hover {
-  background: #66aa66;
-}
-
-/* Sign-in Link */
+/* Login Link */
 .signup-container p {
   margin-top: 1rem;
   font-size: 0.9rem;
 }
 
 .signup-container p a {
-  color: #88cc88;
+  color: #a31621;
   text-decoration: none;
   font-weight: bold;
 }
@@ -399,7 +415,7 @@
   text-decoration: underline;
 }
 
-/* Responsive Styles */
+/* Responsive */
 @media (max-width: 768px) {
   .signup-container {
     width: 90%;

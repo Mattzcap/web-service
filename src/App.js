@@ -17,7 +17,7 @@ function App() {
       <Routes>
 
         {/* Default Route - Login Page */}
-        <Route path="/" element={<TaxiFleetManagement />} />
+        <Route path="/" element={<LoginPage />} />
        
         {/* Landing Page Route */}
         <Route path="/dashboard" element={<DashBoard />} />        

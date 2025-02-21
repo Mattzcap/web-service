@@ -70,13 +70,7 @@ const LoginPage = () => {
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 input-field"
                 placeholder="Enter your password"
               />
-              <button 
-                type="button" 
-                onClick={() => setShowPassword(!showPassword)}
-                className="absolute inset-y-0 right-3 flex items-center text-green-600 hover:text-green-800 text-sm password-toggle"
-              >
-                {showPassword ? "Hide" : "Show"}
-              </button>
+              
             </div>
           </div>
           
@@ -84,19 +78,28 @@ const LoginPage = () => {
             <a href="/forgot-password" className="text-green-600 hover:underline text-sm link-text">Forgot password?</a>
           </div>
 
-          <button type="submit" className="w-full py-3 text-lg bg-green-600 text-white rounded-lg hover:bg-green-700 primary-button">
-            Sign in
-          </button>
+          
         </form>
 
         {/* Google Sign-in Button */}
-        <button 
-          onClick={handleGoogleLogin} 
-          className="w-full mt-4 py-3 text-lg bg-red-600 text-white rounded-lg hover:bg-red-700 flex items-center justify-center"
-        >
-          <img src="https://img.icons8.com/color/24/000000/google-logo.png" alt="Google Logo" className="mr-2" />
-          Sign in with Google
-        </button>
+
+        <div className="button-container">
+          <button type="submit" className="w-full py-3 text-lg primary">
+            Sign in
+          </button>
+
+          <button 
+            onClick={handleGoogleLogin} 
+            className="w-full py-3 text-lg google-signin"
+          >
+            <img 
+              src="https://img.icons8.com/color/24/000000/google-logo.png" 
+              alt="Google Logo" 
+              className="mr-2" 
+            />
+            Sign in with Google
+          </button>
+        </div>
 
         <p className="text-center text-gray-600 mt-6 text-sm">
           New to AuAdsTri? <a href="/signup" className="text-green-600 hover:underline link-text">Join now</a>
