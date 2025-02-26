@@ -19,7 +19,7 @@ const LoginPage = () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       console.log("Login successful!");
-      navigate("/landing");  // Redirect after successful login
+      navigate("/Sidebar");  // Redirect after successful login
     } catch (error) {
       console.error("Login error:", error.message);
       setError("Invalid email or password. Please try again.");
@@ -32,7 +32,7 @@ const LoginPage = () => {
     try {
       await signInWithPopup(auth, provider);
       console.log("Google Login successful!");
-      navigate("/landing"); // Redirect after successful Google login
+      navigate("/Sidebar"); // Redirect after successful Google login
     } catch (error) {
       console.error("Google Login error:", error.message);
       setError("Failed to sign in with Google. Please try again.");
@@ -75,7 +75,7 @@ const LoginPage = () => {
           </div>
           
           <div className="text-right">
-            <a href="/forgot-password" className="text-green-600 hover:underline text-sm link-text">Forgot password?</a>
+            <a href="/forgot" className="text-green-600 hover:underline text-sm link-text">Forgot password?</a>
           </div>
 
           {/* Google Sign-in Button */}

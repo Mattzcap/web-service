@@ -25,39 +25,27 @@ export default function AdminDashboard() {
         <h1>Admin Dashboard</h1>
       </header>
 
-      {/* Navigation Buttons */}
-      <div className="dashboard-nav">
-        {[
-          { label: "Dashboard Overview", path: "/" },
-          { label: "Advertisement Management", path: "/AdvertisementManagement" },
-          { label: "Taxi Fleet Management", path: "/taxi-fleet-management" },
-          { label: "Analytics & Reporting", path: "/analytics-reporting" },
-          { label: "Admin Users Access", path: "/admin-users" },
-        ].map((item, index) => (
-          <Button key={index} className="nav-button" onClick={() => navigate(item.path)} aria-label={item.label}>
-            {item.label}
-          </Button>
-        ))}
-      </div>
+      
 
       {/* Statistics Cards */}
       <div className="dashboard-cards">
-        {[
-          { title: "Total Active Taxis", value: "250", icon: <MapPin size={32} aria-label="Active Taxis" /> },
-          { title: "Running Ads", value: "120", icon: <Video size={32} aria-label="Running Ads" /> },
-          { title: "Revenue Generated", value: "$12,500", icon: <CreditCard size={32} aria-label="Revenue Generated" /> },
-        ].map((item, index) => (
-          <Card key={index} className="stat-card">
-            <CardContent className="stat-card-content">
-              <div className="stat-text">
-                <h3>{item.title}</h3>
-                <p>{item.value}</p>
-              </div>
-              {item.icon}
-            </CardContent>
-          </Card>
-        ))}
+      {[
+        { title: "Total Active Taxis", value: "250", icon: <MapPin size={32}  aria-label="Active Taxis" /> },
+        { title: "Running Ads", value: "120", icon: <Video size={32}  aria-label="Running Ads" /> },
+        { title: "Revenue Generated", value: "$12,500", icon: <CreditCard size={32}  aria-label="Revenue Generated" /> },
+      ].map((item, index) => (
+        <Card key={index} className="stat-card">
+          <CardContent className="stat-card-content">
+            <div className="stat-text">
+              <h3>{item.title}</h3>
+              <p>{item.value}</p>
+            </div>
+            {item.icon} {/* White icons applied */}
+          </CardContent>
+        </Card>
+      ))}
       </div>
+
 
       {/* Performance Analytics Chart */}
       <div className="analytics-chart">
@@ -77,8 +65,8 @@ export default function AdminDashboard() {
       {/* Additional Management Cards */}
       <div className="management-cards">
         {[
-          { title: "Geofencing Zones", description: "Manage ads by location", icon: <Globe size={32} aria-label="Geofencing Zones" /> },
-          { title: "Manage Admin Users", description: "Control system access", icon: <Users size={32} aria-label="Admin Users" /> },
+          { title: "Geofencing Zones", description: "Manage ads by location", icon: <Globe size={32}  aria-label="Geofencing Zones" /> },
+          { title: "Manage Admin Users", description: "Control system access", icon: <Users size={32}  aria-label="Admin Users" /> },
         ].map((item, index) => (
           <Card key={index} className="management-card">
             <CardContent className="management-card-content">

@@ -550,13 +550,13 @@ button.primary, button.google-signin {
 .forgot-password-container {
   width: 100%;
   max-width: 400px;
-  background: #226622; /* Dark green background */
-  color: white;
+  background: #FCF7F8; /* Dark green background */
+  color: #A31621;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
   text-align: center;
-  border: 2px solid #004d00; /* Darker green border for contrast */
+  border: 2px solid #A31621; /* Darker green border for contrast */
 }
 
 /* Title */
@@ -571,17 +571,17 @@ button.primary, button.google-signin {
   width: 100%;
   padding: 12px;
   margin: 8px 0;
-  border: 1px solid #88cc88; /* Light green border */
+  border: 1px solid #A31621; /* Light green border */
   border-radius: 8px;
   font-size: 1rem;
   background: rgba(0, 0, 0, 0.3);
-  color: white;
+  color: rgb(4, 4, 4);
   outline: none;
 }
 
 /* Input Focus Effect */
 .forgot-password-container input:focus {
-  border-color: #66aa66;
+  border-color: #970a16;
   box-shadow: 0 0 8px rgba(136, 204, 136, 0.5);
 }
 
@@ -595,13 +595,14 @@ button.primary, button.google-signin {
   border: none;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  background: #88cc88;
-  color: black;
-  border: 2px solid #004d00;
+  background: #FCF7F8;
+  color: #A31621;
+  border: 2px solid #A31621;
 }
 
 .forgot-password-container button:hover {
-  background: #66aa66;
+  background: #A31621;
+  color: #FCF7F8;
 }
 
 /* Sign-in Link */
@@ -611,7 +612,7 @@ button.primary, button.google-signin {
 }
 
 .forgot-password-container p a {
-  color: #88cc88;
+  color: #A31621;
   text-decoration: none;
   font-weight: bold;
 }

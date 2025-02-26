@@ -9,6 +9,7 @@ import DashBoard from "./pages/DashBoard";
 import AdvertisementManagement from "./pages/AdvertisementManagement";
 import TaxiFleetManagement from "./pages/TaxiFleetManagement";
 import AnalyticsAndReporting from "./pages/AnalyticsAndReporting";
+import Sidebar from "./pages/Sidebar";
 
 
 function App() {
@@ -44,6 +45,9 @@ function App() {
 
         {/* Default Route - Login Page */}
         <Route path="/aanalyticsandreporting" element={<AnalyticsAndReporting />} />  
+
+        {/* Default Route - Sidebar */}
+        <Route path="/Sidebar" element={<Sidebar />} />  
 
         
 

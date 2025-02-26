@@ -32,7 +32,7 @@ export default function Sidebar() {
     <div className="app-container">
       {/* Sidebar Section */}
       <div className="sidebar">
-        <h2 className="sidebar-title">Admin Panel</h2>
+        <h2 className="sidebar-title"><i>AuAdsTri</i></h2>
         <nav className="sidebar-nav">
           {[
             { label: "Dashboard Overview", icon: <Home size={20} /> },
@@ -68,7 +68,7 @@ export default function Sidebar() {
             className="sidebar-button logout-button"
             onClick={() => {
               setSelectedPage("Logout");
-              setTimeout(() => navigate("/login"), 1000); // Simulate logout redirect
+              setTimeout(() => navigate("/"), 1000); // Simulate logout redirect
             }}
           >
             <LogOut size={20} />

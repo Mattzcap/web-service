@@ -79,7 +79,6 @@ export default function AdvertisementManagement() {
     <Container>
       <Header>
         <h1>Advertisement Management</h1>
-        <Button onClick={() => navigate('/')}>Back to Dashboard</Button>
       </Header>
 
       <Card>
