@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import LandingPage from "./pages/LandingPage";
 import SignupPage from "./pages/SignUpPage";
@@ -11,51 +11,22 @@ import TaxiFleetManagement from "./pages/TaxiFleetManagement";
 import AnalyticsAndReporting from "./pages/AnalyticsAndReporting";
 import Sidebar from "./pages/Sidebar";
 
-
 function App() {
   return (
-    // <Router>
-      <Routes>
-
-        {/* Default Route - Login Page */}
-        <Route path="/" element={<LoginPage />} />
-       
-        {/* Landing Page Route */}
-        <Route path="/dashboard" element={<DashBoard />} />        
-        
-        {/* Landing Page Route */}
-        <Route path="/landing" element={<LandingPage />} />
-
-        {/* Default Route - Login Page */}
-        <Route path="/signup" element={<SignupPage />} />
-
-        {/* Default Route - Forgot Page */}
-        <Route path="/forgot" element={<ForgotPage />} />
-
-        {/* Default Route - Forgot Page */}
-        <Route path="/emailforgot" element={<EmailForgot />} />   
-
-        <Route path="/loginpage" element={<LoginPage />} />
-
-        {/* Default Route - Login Page */}
-        <Route path="/advertisemendmangement" element={<AdvertisementManagement />} />        
-
-        {/* Default Route - Login Page */}
-        <Route path="/taxifleemanagement" element={<TaxiFleetManagement />} />            
-
-        {/* Default Route - Login Page */}
-        <Route path="/aanalyticsandreporting" element={<AnalyticsAndReporting />} />  
-
-        {/* Default Route - Sidebar */}
-        <Route path="/Sidebar" element={<Sidebar />} />  
-
-        
-
-      </Routes>
-    // </Router>
+    <Routes>
+      <Route path="/" element={<LoginPage />} />
+      <Route path="/dashboard" element={<DashBoard />} />
+      <Route path="/landing" element={<LandingPage />} />
+      <Route path="/signup" element={<SignupPage />} />
+      <Route path="/forgot" element={<ForgotPage />} />
+      <Route path="/emailforgot" element={<EmailForgot />} />
+      <Route path="/loginpage" element={<LoginPage />} />
+      <Route path="/advertisementmanagement" element={<AdvertisementManagement />} />
+      <Route path="/taxifleemanagement" element={<TaxiFleetManagement />} />
+      <Route path="/analyticsandreporting" element={<AnalyticsAndReporting />} />
+      <Route path="/sidebar" element={<Sidebar />} />
+    </Routes>
   );
 }
-
-
 
 export default App;
