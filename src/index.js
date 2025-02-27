@@ -6,12 +6,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 // Detect environment: Use BrowserRouter for localhost, HashRouter for GitHub Pages
-const Router = window.location.hostname === "localhost" ? BrowserRouter : HashRouter;
+const isLocalhost = window.location.hostname === "localhost";
+const Router = isLocalhost ? BrowserRouter : HashRouter;
+const basename = isLocalhost ? "/" : "/web-service";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router basename={window.location.hostname === "localhost" ? "/" : "/web-service"}>
+    <Router basename={basename}>
       <App />
     </Router>
   </React.StrictMode>
