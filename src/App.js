@@ -14,7 +14,7 @@ import Sidebar from "./pages/Sidebar";
 
 function App() {
   return (
-    <Router>
+    // <Router>
       <Routes>
 
         {/* Default Route - Login Page */}
@@ -52,7 +52,7 @@ function App() {
         
 
       </Routes>
-    </Router>
+    // </Router>
   );
 }
 
