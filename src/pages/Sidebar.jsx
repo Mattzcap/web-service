@@ -68,7 +68,7 @@ export default function Sidebar() {
             className="sidebar-button logout-button"
             onClick={() => {
               setSelectedPage("Logout");
-              setTimeout(() => navigate("/"), 1000); // Simulate logout redirect
+              setTimeout(() => navigate("/web-service"), 1000); // Simulate logout redirect
             }}
           >
             <LogOut size={20} />

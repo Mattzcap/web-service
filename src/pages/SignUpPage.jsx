@@ -18,7 +18,7 @@ const SignUpPage = () => {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       console.log("Sign-up successful!");
-      navigate("/"); // Redirect after successful sign-up
+      navigate("/web-service"); // Redirect after successful sign-up
     } catch (error) {
       console.error("Sign-up error:", error.message);
       setError("Error signing up. Please try again.");
@@ -66,7 +66,7 @@ const SignUpPage = () => {
         </form>
 
         <p className="text-center text-gray-600 mt-6 text-sm">
-          Already have an account? <a href="/forgot" className="text-green-600 hover:underline link-text">Log in</a>
+          Already have an account? <a href="/web-service" className="text-green-600 hover:underline link-text">Log in</a>
         </p>
       </div>
     </div>
