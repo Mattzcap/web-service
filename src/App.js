@@ -14,7 +14,7 @@ import Sidebar from "./pages/Sidebar";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<LoginPage />} />
+      <Route path="/web-service" element={<LoginPage />} />
       <Route path="/dashboard" element={<DashBoard />} />
       <Route path="/landing" element={<LandingPage />} />
       <Route path="/signup" element={<SignupPage />} />

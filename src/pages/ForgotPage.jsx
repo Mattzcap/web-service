@@ -17,7 +17,7 @@ const ForgotPage = () => {
     try {
       await sendPasswordResetEmail(auth, email);
       setMessage("Password reset email sent! Check your inbox.");
-      setTimeout(() => navigate("/"), 5000); // Redirect after 5 seconds
+      setTimeout(() => navigate("/web-service"), 5000); // Redirect after 5 seconds
     } catch (error) {
       console.error("Error sending reset email:", error.message);
       setError("Failed to send reset email. Please check your email and try again.");
@@ -51,7 +51,7 @@ const ForgotPage = () => {
         </form>
 
         <p className="text-center text-gray-600 mt-6 text-sm">
-          Remembered your password? <a href="/" className="text-gray-600 hover:underline link-text">Login</a>
+          Remembered your password? <a href="/web-service" className="text-gray-600 hover:underline link-text">Login</a>
         </p>
       </div>
     </div>
