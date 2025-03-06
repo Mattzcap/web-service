@@ -3,6 +3,8 @@ import { MapPin, CheckCircle, XCircle } from "lucide-react";
 import "../styles/TaxiFleetManagement.css";
 import { Card, CardContent } from "../components/ui/Card";
 import Button from "../components/ui/Button";
+import GoogleMapComponent from "../RealTimeMap";
+
 
 const taxiFleetData = [
   { id: 1, driver: "John Doe", location: "Downtown", status: "Online" },
@@ -42,13 +44,10 @@ export default function TaxiFleetManagement() {
         ))}
       </div>
 
-      {/* Real-time Location Tracking (Placeholder) */}
+      {/* Real-time Location Tracking */}
       <div className="real-time-map">
         <h2>Real-time Location Tracking</h2>
-        <div className="map-placeholder">
-          <MapPin size={48} />
-          <p>Map Integration Coming Soon...</p>
-        </div>
+        <GoogleMapComponent taxis={taxis} />
       </div>
     </div>
   );

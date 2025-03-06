@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import Button from "../components/ui/Button";
 import { Upload, MapPin, Calendar, BarChart2 } from "lucide-react";
 import "../styles/AdvertisementManagement.css"; // Import the CSS file
 
@@ -14,7 +13,6 @@ const Container = styled.div`
 
 const Header = styled.header`
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 20px;
   background-color: #333;
@@ -44,23 +42,45 @@ const MetricsContainer = styled.div`
   gap: 15px;
 `;
 
-const Metric = styled.div`
+const MetricButton = styled.button`
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px;
+  justify-content: center;
+  font-size: 16px;
+  color: rgb(7, 7, 7);
   border-radius: 8px;
+  transition: background 0.2s ease-in-out;
+
+  &:hover {
+    background-color: rgba(84, 89, 94, 0.1); /* Light hover effect */
+  }
+`;
+
+const Metric = styled.div`
   width: 150px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
   text-align: center;
   background-color: ${(props) => props.bgColor || '#fff'};
 `;
 
 export default function AdvertisementManagement() {
-  const navigate = useNavigate();
   const [ads, setAds] = useState([]);
   const [selectedFile, setSelectedFile] = useState(null);
   const [location, setLocation] = useState('');
   const [schedule, setSchedule] = useState('');
+  const navigate = useNavigate();
 
   const handleFileUpload = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -75,6 +95,39 @@ export default function AdvertisementManagement() {
     }
   };
 
+  // ✅ Correct Sidebar Navigation for Uploads
+  const handleUploadsNavigation = () => {
+    navigate("/"); // Navigate to the main dashboard route
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "Uploads" }));
+    }, 100);
+  };
+
+  // ✅ Correct Sidebar Navigation for Locations
+  const handleLocationsNavigation = () => {
+    navigate("/"); // Navigate to the main dashboard route
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "Locations" }));
+    }, 100);
+  };
+
+  const handleScheduleNavigation = () => {
+    navigate("/"); // Navigate to the main dashboard route
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "Schedule & Duration" }));
+    }, 100);
+  };
+  
+  const handleCTRNavigation = () => {
+    navigate("/"); // Navigate to the main dashboard route
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "CTR & Conversions" }));
+    }, 100);
+  };
+  
+
+  
+
   return (
     <Container>
       <Header>
@@ -86,27 +139,42 @@ export default function AdvertisementManagement() {
         <Input type="file" onChange={handleFileUpload} />
         <Input type="text" placeholder="Enter Location" value={location} onChange={(e) => setLocation(e.target.value)} />
         <Input type="datetime-local" value={schedule} onChange={(e) => setSchedule(e.target.value)} />
-        <Button onClick={handleSubmitAd}>Submit Ad</Button>
+        <button onClick={handleSubmitAd}>Submit Ad</button>
       </Card>
 
       <Card>
         <h3>Ad Performance Metrics</h3>
         <MetricsContainer>
+          {/* ✅ Updated Uploads Metric to Use the Sidebar Navigation */}
           <Metric bgColor="#d0ebff">
-            <Upload size={32} />
-            <p>Uploads: {ads.length}</p>
+            <MetricButton onClick={handleUploadsNavigation}>
+              <Upload size={32} />
+              <p>Uploads: {ads.length}</p>
+            </MetricButton>
           </Metric>
+
+          {/* ✅ Updated Locations Metric to Use the Sidebar Navigation */}
           <Metric bgColor="#d3f9d8">
-            <MapPin size={32} />
-            <p>Locations Assigned</p>
+            <MetricButton onClick={handleLocationsNavigation}>
+              <MapPin size={32} />
+              <p>Locations Assigned</p>
+            </MetricButton>
           </Metric>
+
+          {/* Schedule & Duration Metric */}
           <Metric bgColor="#fff3cd">
-            <Calendar size={32} />
-            <p>Schedule & Duration</p>
+          <MetricButton onClick={handleScheduleNavigation}>
+              <Calendar size={32} />
+              <p>Schedule & Duration</p>
+            </MetricButton>
           </Metric>
+
+          {/* CTR & Conversions Metric */}
           <Metric bgColor="#f8d7da">
-            <BarChart2 size={32} />
-            <p>CTR & Conversions</p>
+          <MetricButton onClick={handleCTRNavigation}>
+              <BarChart2 size={32} />
+              <p>CTR & Conversions</p>
+            </MetricButton>
           </Metric>
         </MetricsContainer>
       </Card>
