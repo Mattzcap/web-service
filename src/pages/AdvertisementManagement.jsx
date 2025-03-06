@@ -97,7 +97,7 @@ export default function AdvertisementManagement() {
 
   // ✅ Correct Sidebar Navigation for Uploads
   const handleUploadsNavigation = () => {
-    navigate("/"); // Navigate to the main dashboard route
+    navigate("/uploadpage"); // Navigate to the main dashboard route
     setTimeout(() => {
       window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "Uploads" }));
     }, 100);
@@ -105,21 +105,21 @@ export default function AdvertisementManagement() {
 
   // ✅ Correct Sidebar Navigation for Locations
   const handleLocationsNavigation = () => {
-    navigate("/"); // Navigate to the main dashboard route
+    navigate("/locationpage"); // Navigate to the main dashboard route
     setTimeout(() => {
       window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "Locations" }));
     }, 100);
   };
 
   const handleScheduleNavigation = () => {
-    navigate("/"); // Navigate to the main dashboard route
+    navigate("/scheduleduration"); // Navigate to the main dashboard route
     setTimeout(() => {
       window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "Schedule & Duration" }));
     }, 100);
   };
   
   const handleCTRNavigation = () => {
-    navigate("/"); // Navigate to the main dashboard route
+    navigate("/ctrconversions"); // Navigate to the main dashboard route
     setTimeout(() => {
       window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "CTR & Conversions" }));
     }, 100);
