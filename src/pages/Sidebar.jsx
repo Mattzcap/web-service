@@ -5,6 +5,7 @@ import AdminDashboard from "../pages/DashBoard";
 import AdvertisementManagement from "../pages/AdvertisementManagement";
 import TaxiFleetManagement from "../pages/TaxiFleetManagement";
 import AnalyticsAndReporting from "../pages/AnalyticsAndReporting";
+import AdminTicketingSystem from "../pages/AdminTicketingSystem";
 import "../styles/Sidebar.css";
 
 export default function Sidebar() {
@@ -23,7 +24,7 @@ export default function Sidebar() {
     "Advertisement Management": <AdvertisementManagement />,
     "Taxi Fleet Management": <TaxiFleetManagement />,
     "Analytics & Reporting": <AnalyticsAndReporting />,
-    "Admin Users Access": <h1>Admin Users Access Content</h1>,
+    "Admin Users Access": <AdminTicketingSystem/>,
     "Settings": <h1>Settings Content</h1>,
     "Logout": <h1>Logging out...</h1>, // Placeholder for logout functionality
   };
