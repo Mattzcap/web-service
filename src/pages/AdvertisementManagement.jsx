@@ -64,6 +64,7 @@
     }
   `;
 
+<<<<<<< HEAD
   const Metric = styled.div`
     width: 150px;
     height: 100px;
@@ -108,6 +109,34 @@
     };
     
     const handleCTRNavigation = () => {
+=======
+  // ✅ Correct Sidebar Navigation for Uploads
+  const handleUploadsNavigation = () => {
+    navigate("/uploadpage"); // Navigate to the main dashboard route
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "Uploads" }));
+    }, 100);
+  };
+
+  // ✅ Correct Sidebar Navigation for Locations
+  const handleLocationsNavigation = () => {
+    navigate("/locationpage"); // Navigate to the main dashboard route
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "Locations" }));
+    }, 100);
+  };
+
+  const handleScheduleNavigation = () => {
+    navigate("/scheduleduration"); // Navigate to the main dashboard route
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "Schedule & Duration" }));
+    }, 100);
+  };
+  
+  const handleCTRNavigation = () => {
+    navigate("/ctrconversions"); // Navigate to the main dashboard route
+    setTimeout(() => {
+>>>>>>> f069f43589847282b4b8860fcb744efc19c9c7d3
       window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "CTR & Conversions" }));
     };
     
