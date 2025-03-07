@@ -20,22 +20,11 @@ import RealTimeMap from "./RealTimeMap";
 function App() {
   return (
     <Routes>
-      <Route path="/web-service" element={<LoginPage />} />
+      <Route path="/web-service" element={<Sidebar />} />
       <Route path="/dashboard" element={<DashBoard />} />
       <Route path="/landing" element={<LandingPage />} />
       <Route path="/signup" element={<SignupPage />} />
-      <Route path="/forgot" element={<ForgotPage />} />
-      <Route path="/emailforgot" element={<EmailForgot />} />
-      <Route path="/loginpage" element={<LoginPage />} />
-      <Route path="/advertisementmanagement" element={<AdvertisementManagement />} />
-      <Route path="/taxifleemanagement" element={<TaxiFleetManagement />} />
-      <Route path="/analyticsandreporting" element={<AnalyticsAndReporting />} />
-      <Route path="/sidebar" element={<Sidebar />} />
-      <Route path="/web-service" element={<LoginPage />} />
-      <Route path="/dashboard" element={<DashBoard />} />
-      <Route path="/landing" element={<LandingPage />} />
-      <Route path="/signup" element={<SignupPage />} />
-      <Route path="/forgot" element={<ForgotPage />} />
+      <Route path="/forgot" element={<Sidebar/>} />
       <Route path="/emailforgot" element={<EmailForgot />} />
       <Route path="/loginpage" element={<LoginPage />} />
       <Route path="/advertisementmanagement" element={<AdvertisementManagement />} />
@@ -47,6 +36,7 @@ function App() {
       <Route path="/scheduleduration" element={<ScheduleDuration/>} />
       <Route path="/ctrconversions" element={<CTRConversions/>} />
       <Route path="/realtimemap" element={<RealTimeMap/>} />
+      <Route path="/forgotpage" element={<ForgotPage/>} />
     </Routes>
   );
 }

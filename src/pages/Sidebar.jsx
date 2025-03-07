@@ -1,22 +1,32 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Home, BarChart, Car, Users, MonitorSmartphone, Settings, LogOut } from "lucide-react";
+import { Home, BarChart, Car, Users, MonitorSmartphone, Settings, LogOut, Upload, MapPin, Calendar, BarChart2 } from "lucide-react";
 import AdminDashboard from "../pages/DashBoard";
 import AdvertisementManagement from "../pages/AdvertisementManagement";
 import TaxiFleetManagement from "../pages/TaxiFleetManagement";
 import AnalyticsAndReporting from "../pages/AnalyticsAndReporting";
 import AdminTicketingSystem from "../pages/AdminTicketingSystem";
+import UploadsPage from "../pages/UploadsPage";
+import LocationsPage from "../pages/LocationsPage";
+import ScheduleDuration from "../pages/ScheduleDuration";
+import CTRConversions from "../pages/CTRConversions";
+
 import "../styles/Sidebar.css";
 
 export default function Sidebar() {
   const navigate = useNavigate();
   const [selectedPage, setSelectedPage] = useState("Dashboard Overview");
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    // Listen for sidebar updates from other components
+    const handleSidebarUpdate = (event) => {
+      if (event.detail) {
+        setSelectedPage(event.detail);
+      }
+    };
+
+    window.addEventListener("updateSidebar", handleSidebarUpdate);
+    return () => window.removeEventListener("updateSidebar", handleSidebarUpdate);
   }, []);
 
   const pages = {
@@ -24,9 +34,13 @@ export default function Sidebar() {
     "Advertisement Management": <AdvertisementManagement />,
     "Taxi Fleet Management": <TaxiFleetManagement />,
     "Analytics & Reporting": <AnalyticsAndReporting />,
-    "Admin Users Access": <AdminTicketingSystem/>,
+    "Ticketing System": <AdminTicketingSystem />,
+    "Uploads": <UploadsPage />, 
+    "Locations": <LocationsPage />, 
+    "Schedule & Duration": <ScheduleDuration />, 
+    "CTR & Conversions": <CTRConversions />, 
     "Settings": <h1>Settings Content</h1>,
-    "Logout": <h1>Logging out...</h1>, // Placeholder for logout functionality
+    "Logout": <h1>Logging out...</h1>,
   };
 
   return (
@@ -40,7 +54,7 @@ export default function Sidebar() {
             { label: "Advertisement Management", icon: <MonitorSmartphone size={20} /> },
             { label: "Taxi Fleet Management", icon: <Car size={20} /> },
             { label: "Analytics & Reporting", icon: <BarChart size={20} /> },
-            { label: "Admin Users Access", icon: <Users size={20} /> },
+            { label: "Ticketing System", icon: <Users size={20} /> },
           ].map((item, index) => (
             <button
               key={index}
@@ -55,7 +69,6 @@ export default function Sidebar() {
 
         {/* Sidebar Footer with Settings and Logout Buttons */}
         <div className="sidebar-footer">
-          {/* Settings Button */}
           <button
             className={`sidebar-button ${selectedPage === "Settings" ? "active" : ""}`}
             onClick={() => setSelectedPage("Settings")}
@@ -64,12 +77,11 @@ export default function Sidebar() {
             <span>Settings</span>
           </button>
 
-          {/* Logout Button */}
           <button
             className="sidebar-button logout-button"
             onClick={() => {
               setSelectedPage("Logout");
-              setTimeout(() => navigate("/web-service"), 1000); // Simulate logout redirect
+              setTimeout(() => navigate("/web-service"), 1000);
             }}
           >
             <LogOut size={20} />
