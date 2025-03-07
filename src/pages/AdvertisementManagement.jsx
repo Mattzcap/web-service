@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import styled from "styled-components";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
 import { Upload, MapPin, Calendar, BarChart2 } from "lucide-react";
 import "../styles/AdvertisementManagement.css"; // Import the CSS file
 
@@ -72,14 +72,14 @@ const Metric = styled.div`
   align-items: center;
   border-radius: 8px;
   text-align: center;
-  background-color: ${(props) => props.bgColor || "#fff"};
+  background-color: ${(props) => props.bgColor || '#fff'};
 `;
 
 export default function AdvertisementManagement() {
   const [ads, setAds] = useState([]);
   const [selectedFile, setSelectedFile] = useState(null);
-  const [location, setLocation] = useState("");
-  const [schedule, setSchedule] = useState("");
+  const [location, setLocation] = useState('');
+  const [schedule, setSchedule] = useState('');
   const navigate = useNavigate();
 
   const handleFileUpload = (event) => {
@@ -90,40 +90,30 @@ export default function AdvertisementManagement() {
     if (selectedFile && location && schedule) {
       setAds([...ads, { file: selectedFile.name, location, schedule }]);
       setSelectedFile(null);
-      setLocation("");
-      setSchedule("");
+      setLocation('');
+      setSchedule('');
     }
   };
 
-  // ✅ Correct Sidebar Navigation for Uploads
   const handleUploadsNavigation = () => {
-    navigate("/uploadpage");
-    setTimeout(() => {
-      window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "Uploads" }));
-    }, 100);
+    window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "Uploads" }));
   };
-
-  // ✅ Correct Sidebar Navigation for Locations
+  
   const handleLocationsNavigation = () => {
-    navigate("/locationpage");
-    setTimeout(() => {
-      window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "Locations" }));
-    }, 100);
+    window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "Locations" }));
   };
-
+  
   const handleScheduleNavigation = () => {
-    navigate("/scheduleduration");
-    setTimeout(() => {
-      window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "Schedule & Duration" }));
-    }, 100);
+    window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "Schedule & Duration" }));
   };
-
+  
   const handleCTRNavigation = () => {
-    navigate("/ctrconversions");
-    setTimeout(() => {
-      window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "CTR & Conversions" }));
-    }, 100);
+    window.dispatchEvent(new CustomEvent("updateSidebar", { detail: "CTR & Conversions" }));
   };
+  
+  
+
+  
 
   return (
     <Container>
@@ -160,7 +150,7 @@ export default function AdvertisementManagement() {
 
           {/* Schedule & Duration Metric */}
           <Metric bgColor="#fff3cd">
-            <MetricButton onClick={handleScheduleNavigation}>
+          <MetricButton onClick={handleScheduleNavigation}>
               <Calendar size={32} />
               <p>Schedule & Duration</p>
             </MetricButton>
@@ -168,7 +158,7 @@ export default function AdvertisementManagement() {
 
           {/* CTR & Conversions Metric */}
           <Metric bgColor="#f8d7da">
-            <MetricButton onClick={handleCTRNavigation}>
+          <MetricButton onClick={handleCTRNavigation}>
               <BarChart2 size={32} />
               <p>CTR & Conversions</p>
             </MetricButton>
